@@ -619,3 +619,16 @@ footer i:hover {
     grid-template-columns: 1fr;
   }
 }
+.bg-soft-green,
+.bg-light-yellow,
+.section.light,
+.full-width-blue {
+  color:#1f2933;
+}
+
+.bg-soft-green h2,
+.bg-soft-green p,
+.bg-light-yellow h2,
+.bg-light-yellow p {
+  color:#1f2933;
+}
