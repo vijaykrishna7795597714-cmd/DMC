@@ -15,12 +15,14 @@ body {
   line-height: 1.7;
 }
 
-.navbar {
+header {
   position: sticky;
   top: 0;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
+
 
 .nav-container {
   max-width: 1200px;
@@ -737,3 +739,62 @@ ul {
 * {
   box-sizing: border-box;
 }
+body {
+  padding-top: 72px; /* height of header */
+}
+.full-width-blue {
+  position: relative;
+  overflow: hidden;
+}
+
+.full-width-inner {
+  align-items: flex-start;
+}
+
+.content-left,
+.content-right {
+  min-width: 0;
+}
+
+.side-image {
+  max-width: 100%;
+  height: auto;
+}
+.full-width-blue,
+.hero {
+  color: #111827; /* professional dark text */
+}
+
+.full-width-blue h2,
+.full-width-blue h3 {
+  color: #0f172a;
+}
+
+.full-width-blue p,
+.full-width-blue li {
+  color: #1f2937;
+}
+.powder-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.powder-card img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+@media (max-width: 900px) {
+  .powder-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hero-contact-cards {
+  justify-content: center;
+  align-items: center;
+}
+.hero-buttons { margin-top: 30px; }
