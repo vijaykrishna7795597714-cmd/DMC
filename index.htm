@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divasa Fresh – Building a Fair Farm-to-Market System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Inter,sans-serif;
+  color:#1f2933;
+  line-height:1.7;
+  background:#fff;
+}
+
+/* NAVBAR */
+header{
+  position:sticky;
+  top:0;
+  background:#ffffffee;
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid #e5e7eb;
+  z-index:1000;
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:#2f6f4e;
+}
+.nav a{
+  margin-left:24px;
+  text-decoration:none;
+  font-weight:500;
+  color:#1f2933;
+}
+.nav a.cta{
+  background:#2f6f4e;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+}
+
+/* HERO */
+.hero{
+  background:
+  linear-gradient(rgba(47,111,78,.75),rgba(47,111,78,.75)),
+  url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=1600");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:140px 20px;
+}
+.hero-content{
+  max-width:900px;
+  margin:auto;
+}
+.hero h1{
+  font-size:46px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+.hero p{
+  font-size:18px;
+  max-width:720px;
+}
+.hero-buttons{
+  margin-top:30px;
+}
+.hero-buttons a{
+  display:inline-block;
+  margin-right:15px;
+  padding:14px 22px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn-primary{background:#ffffff;color:#2f6f4e}
+.btn-outline{border:2px solid #fff;color:#fff}
+
+/* SECTIONS */
+.section{
+  padding:90px 20px;
+}
+.section.light{
+  background:#f7faf8;
+}
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+h2{
+  font-size:34px;
+  margin-bottom:30px;
+  color:#1e4633;
+}
+h3{
+  margin-top:30px;
+  margin-bottom:12px;
+}
+ul{
+  padding-left:20px;
+}
+ul li{
+  margin-bottom:10px;
+}
+
+/* FLOW */
+.flow{
+  font-weight:600;
+  background:#e8f3ee;
+  padding:20px;
+  border-radius:8px;
+  margin-bottom:25px;
+}
+
+/* IMAGE GRIDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin-top:40px;
+}
+.grid img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  text-align:center;
+}
+.stat{
+  font-size:36px;
+  font-weight:700;
+  color:#2f6f4e;
+}
+.stat span{
+  display:block;
+  font-size:14px;
+  font-weight:500;
+  margin-top:8px;
+}
+
+/* FORM */
+form input,form textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:16px;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+form button{
+  background:#2f6f4e;
+  color:#fff;
+  padding:14px;
+  width:100%;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  font-weight:600;
+}
+<section class="section light">
+  <div class="container">
+
+    <h2 id="terms">Terms & Conditions</h2>
+    <p>
+      Divasa Fresh operates as a farm-to-market aggregation platform supplying fresh
+      fruits, vegetables, and food products. By engaging with our services, you agree
+      to comply with all applicable laws, delivery guidelines, and usage policies.
+      Product availability may vary based on seasonality and sourcing conditions.
+    </p>
+
+    <h2 id="privacy">Privacy Policy</h2>
+    <p>
+      We respect your privacy. Any personal information shared with Divasa Fresh is
+      used solely for order processing, communication, and service improvement.
+      We do not sell or share customer data with third parties.
+    </p>
+
+    <h2 id="refund">Refund Policy</h2>
+    <p>
+      Due to the perishable nature of fresh produce, refunds are evaluated on a
+      case-by-case basis. Issues related to quality or incorrect delivery must be
+      reported within 24 hours of delivery for resolution.
+    </p>
+
+    <h2 id="shipping">Shipping & Delivery</h2>
+    <p>
+      Deliveries are scheduled based on location, order type, and subscription plans.
+      While we strive for timely delivery, delays due to weather, supply constraints,
+      or operational factors may occur.
+    </p>
+
+  </div>
+</section>
+
+/* FOOTER */
+<footer>
+  <p style="margin-bottom:12px;font-weight:500;">Follow Us</p>
+
+  <div style="font-size:22px;">
+    <a href="https://www.instagram.com/divasafresh/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="mailto:divasafreshf2f@gmail.com" aria-label="Email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <div style="margin-top:20px;font-size:14px;">
+    <a href="#terms">Terms & Conditions</a> |
+    <a href="#privacy">Privacy Policy</a> |
+    <a href="#refund">Refund Policy</a> |
+    <a href="#shipping">Shipping & Delivery</a>
+  </div>
+
+  <p style="margin-top:15px;font-size:13px;">
+    © Divasa Fresh – All Rights Reserved
+  </p>
+</footer>
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:34px}
+  .nav a{margin-left:14px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Divasa Fresh</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#farmers">Farmers</a>
+      <a href="#partners">Partners</a>
+      <a href="#enquiry" class="cta">Business Enquiry</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Divasa Fresh – Building a Fair Farm-to-Market System</h1>
+    <p>
+  We operate as a farm-to-market platform built to connect farmers and consumers
+  through an organized, transparent, and quality-focused supply system.
+</p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn-primary">Contact Us</a>
+      <a href="https://wa.me/919900152573" class="btn-outline">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Divasa Fresh</h2>
+
+    <h3>Who We Are</h3>
+    <p>
+  Divasa Fresh was created to bring structure, trust, and reliability to fresh
+  produce sourcing by working directly with farmers and delivering quality-assured
+  fruits and vegetables through an organized supply chain.
+</p>
+
+
+    <h3>What We Do</h3>
+    <ul>
+  <li>Develop structured sourcing partnerships with farmers to ensure consistent and reliable supply</li>
+  <li>Aggregate fresh produce through planned procurement and centralized handling</li>
+  <li>Apply standardized quality, grading, and consistency checks aligned with market requirements</li>
+  <li>Serve households, retail chains, hotels, restaurants, and institutions with dependable farm-fresh supply</li>
+</ul>
+
+
+    <h3>Why Divasa Fresh Exists</h3>
+    <p>
+  Divasa Fresh exists to bring structure, reliability, and transparency to the
+  farm-to-market supply chain. By taking ownership of sourcing, aggregation,
+  quality control, and distribution, we bridge the gap between farms and end
+  consumers, creating a balanced ecosystem where farmers are valued partners,
+  operations are efficient, and customers receive quality-assured produce they
+  can trust.
+</p>
+
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+
+    <h2>🌱 Divasa Fresh</h2>
+    <p><strong>Fresh. Honest. Farmer-First.</strong></p>
+
+    <p>
+      Divasa Fresh delivers farm-fresh fruits and vegetables along with
+      subscription-based healthy food solutions for households, restaurants,
+      cafés, offices, and businesses.
+    </p>
+
+<section class="fw-section bg-light-yellow">
+  <div class="fw-inner">
+
+    <!-- LEFT : TIME BOX -->
+    <div class="curve-box veg-time-box">
+      <h3>🥦 Vegetable Supply Timings</h3>
+      <p class="time-big">6:00 AM – 11:00 PM</p>
+      <p>Fresh vegetables available throughout the day</p>
+    </div>
+
+    <!-- RIGHT : EXPLANATION -->
+    <div>
+      <h2>Fresh Vegetables – Direct From Farmers</h2>
+
+      <p>
+        At Divasa Fresh, we source vegetables directly from trusted local farmers,
+        following a transparent and quality-focused procurement process.
+        There are no middlemen involved, ensuring fair value for farmers and
+        fresh produce for customers.
+      </p>
+
+      <p>
+        Vegetables are delivered directly to your doorstep, maintaining freshness
+        without unnecessary storage or prolonged handling.
+      </p>
+
+      <h3>📦 Subscription-Based Vegetable Supply</h3>
+      <p>
+        We offer convenient subscription plans for households:
+      </p>
+
+      <ul>
+        <li>Weekly Vegetable Subscription – starting at <strong>₹299</strong></li>
+        <li>Monthly Vegetable Subscription – starting at <strong>₹1090</strong></li>
+      </ul>
+
+     <p>
+  Our subscriptions are ideal for families looking for consistent,
+  reliable, and fresh vegetable supply without daily market visits.
+</p>
+
+<div style="text-align:center;margin-top:30px;">
+  <a
+    href="https://wa.me/919900152573"
+    target="_blank"
+    class="whatsapp-btn"
+  >
+    Order Vegetables on WhatsApp
+  </a>
+</div>
+
+
+  </div>
+</section>
+
+    
+<section class="full-width-blue">
+  <div class="full-width-inner">
+
+    <!-- LEFT CONTENT -->
+    <div class="content-left">
+      <h2>Fruit Bowl & Fruit Box Subscriptions</h2>
+
+      <p>
+        At Divasa Fresh, we offer thoughtfully curated Fruit Bowl and Fruit Box
+        subscription plans designed to make healthy eating simple, consistent,
+        and affordable for every household.
+      </p>
+
+      <h3>📅 Flexible Weekly & Monthly Plans</h3>
+      <p>
+        Our subscriptions start with a Weekly Plan from ₹299, ideal for individuals
+        or small families who want fresh fruits delivered regularly.
+      </p>
+      <p>
+        For long-term convenience and better value, we also offer Monthly Plans
+        starting from ₹899, ensuring a steady supply of seasonal, high-quality fruits
+        throughout the month.
+      </p>
+
+      <h3>🥭 Custom Fruit Selection</h3>
+      <p>
+        Customers can choose from our custom plans, where fruits are selected based
+        on personal preferences, availability, and dietary needs. You can exclude
+        fruits you don’t like and include the ones you enjoy most.
+      </p>
+
+      <h3>🥗 Nutrition-Focused Special Plans</h3>
+      <ul>
+        <li>Weight Loss Plan – low-calorie, high-fiber fruits</li>
+        <li>Bulking Plan – energy-dense and nutrient-rich fruits</li>
+        <li>Health & Wellness Plan – balanced fruits for daily nutrition</li>
+        <li>Children’s Plan – immunity-supporting and kid-friendly fruits</li>
+      </ul>
+
+      <p>
+        Each plan is crafted to support specific health goals while maintaining taste
+        and freshness.
+      </p>
+
+      <h3>👨‍👩‍👧‍👦 Ideal for Families & Professionals</h3>
+      <p>
+        Our subscriptions are perfect for busy families, working professionals,
+        and health-conscious individuals who want reliable access to fresh fruits
+        without frequent market visits.
+      </p>
+
+      <strong>Freshly sourced. Carefully packed. Delivered with care.</strong>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content-right">
+
+      <img
+        src="images/fruit-bowls.jpg"
+        alt="Divasa Fresh Fruit Bowls and Boxes"
+        class="side-image"
+      >
+
+      <div class="time-slot-card">
+        <h3>🍎 Fruits Box / Bowl Delivery Slots</h3>
+        <p>🌅 <strong>Morning:</strong> 6:00 AM – 11:00 AM</p>
+        <p>☀️ <strong>Afternoon:</strong> 12:00 PM – 3:00 PM</p>
+        <p>🌙 <strong>Evening:</strong> 4:00 PM – 9:00 PM</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="full-width-block bg-pale-pink">
+  <div class="fw-inner">
+
+    <!-- LEFT : JUICE IMAGE -->
+    <div class="image-wrap">
+
+        <img src="images/Juice.jpg" class="fw-image">
+      />
+    </div>
+
+    <!-- RIGHT : CONTENT -->
+    <div>
+      <h2>Fresh Juice Delivery for Functions & Events</h2>
+
+      <p>
+        Divasa Fresh offers freshly prepared, natural fruit and vegetable juices
+        made from high-quality produce with <strong>no added sugar, no preservatives,
+        and no artificial flavors</strong>.
+      </p>
+
+      <p>
+        Our juices are ideal for functions, events, offices, and bulk orders.
+        Each bottle reflects the natural color of the fruit itself, ensuring
+        purity, freshness, and authentic taste.
+      </p>
+
+      <h3>🥤 Available Juice Varieties</h3>
+
+      <ul class="juice-list">
+        <li><strong>Orange Juice</strong> – Boosts immunity, rich in Vitamin C</li>
+        <li><strong>Pomegranate Juice</strong> – Improves heart health, rich in antioxidants</li>
+        <li><strong>Watermelon Juice</strong> – Hydration & cooling effect</li>
+        <li><strong>Beetroot Juice</strong> – Supports blood health & stamina</li>
+        <li><strong>Carrot Juice</strong> – Improves vision & skin health</li>
+        <li><strong>Apple Juice</strong> – Supports digestion & heart health</li>
+        <li><strong>Amla Juice</strong> – Strengthens immunity & metabolism</li>
+        <li><strong>Cucumber Juice</strong>
+
+
+<section class="fw-section bg-soft-green">
+  <div class="fw-inner">
+
+    <!-- LEFT TEXT -->
+    <div>
+      <h2>Upcoming Launch: Solar-Dried Health Powders</h2>
+
+      <p>
+        At Divasa Fresh, we follow a natural and careful solar drying method
+        to preserve the true essence of farm-fresh produce. Fresh leaves and
+        roots are sourced directly from trusted farmers and cleaned thoroughly.
+      </p>
+
+      <p>
+        They are then solar dried at controlled, low temperatures, allowing
+        moisture to reduce naturally without harsh heat exposure. This helps
+        retain natural color, aroma, and essential nutrients while avoiding
+        chemicals or artificial drying methods.
+      </p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <img src="images/solar-drying.jpg" class="fw-image">
+
+  </div>
+</section>
+
+    <section class="fw-section bg-white">
+  <div class="fw-inner">
+
+    <!-- LEFT IMAGE -->
+    <img src="images/divasa-powders.jpg" class="fw-image">
+
+    <!-- RIGHT TEXT -->
+    <div>
+      <h2>Careful Processing & Packing</h2>
+
+      <p>
+        Once solar dried, the produce is finely ground in hygienic facilities
+        under strict quality control. The powders are immediately packed in
+        food-grade, moisture-resistant packaging to protect freshness and purity.
+      </p>
+
+      <p>
+        Each pack is handled carefully to prevent contamination and nutrient
+        loss, ensuring consistent quality from processing to delivery.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    
+
+
+<section class="fw-section bg-black">
+  <div class="fw-inner">
+
+    <!-- LEFT IMAGE -->
+    <img src="images/moringa-powder.jpg" class="fw-image">
+
+    <!-- RIGHT TEXT -->
+    <div>
+      <h2>Moringa Leaf Powder</h2>
+
+      <ul>
+        <li>✔ Supports natural energy levels through rich micronutrients</li>
+        <li>✔ Helps maintain digestive balance and gut health</li>
+        <li>✔ Provides plant-based antioxidants for overall body function</li>
+        <li>✔ Contributes to bone strength with natural calcium</li>
+        <li>✔ Supports healthy immunity as part of daily nutrition</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+    
+<section class="fw-section bg-white">
+  <div class="fw-inner">
+
+    <!-- LEFT IMAGE -->
+    <img src="images/divasa-powders.jpg" class="fw-image">
+
+    <!-- RIGHT CONTENT -->
+    <div class="curve-box">
+      <h3>🥬 Amla Powder</h3>
+      <p>Supports digestion, skin health, metabolism, and internal balance.</p>
+
+      <h3>❤️ Beetroot Powder</h3>
+      <p>Supports blood circulation, stamina, and heart health.</p>
+
+      <h3>🥬 Spinach Powder</h3>
+      <p>Supports healthy hemoglobin levels and daily nutrition.</p>
+
+      <h3>🌼 Turmeric Powder (Solar-Dried)</h3>
+      <p>Supports joint health, digestion, and long-term wellness.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="fw-section bg-soft-green">
+  <div class="fw-inner" style="grid-template-columns:1fr;">
+    <h2>How Divasa Fresh Works</h2>
+    <p>
+      Farmer Partners → Divasa Fresh (Aggregation & Quality Control) →
+      Organized Distribution → Consumers | Supermarkets | Hotels | Institutions
+    </p>
+  </div>
+</section>
+
+
+<section id="farmers" class="section">
+  <div class="container">
+    <h2>Farmers Are Our Partners</h2>
+    <h3>Built on Collaboration</h3>
+<p>
+  At Divasa Fresh, we believe that long-term success in food supply begins with strong
+  farmer partnerships. We work closely with farmers at the source, planning harvests,
+  aligning quality expectations, and coordinating supply in advance. This collaborative
+  approach provides farmers with organized market access and operational support,
+  allowing them to focus on cultivation with greater confidence.
+</p>
+
+<h3>A Structured Partnership Model</h3>
+<p>
+  Divasa Fresh takes responsibility for aggregation, quality checks, and distribution
+  through a structured sourcing model designed to simplify the supply chain. By
+  coordinating procurement at the farm level and managing aggregation and distribution
+  centrally, we reduce unnecessary handling and operational inefficiencies. This
+  partnership-driven model helps farmers realize better value for their produce, while
+  ensuring consumers receive fresh, quality-assured vegetables delivered with
+  transparency, efficiency, and fair pricing.
+</p>
+
+
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=800">
+      <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Indian farmer harvesting vegetables">
+      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800">
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="section light">
+  <div class="container">
+    <h2>Who We Work With</h2>
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=800">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container stats">
+    <div class="stat">100+<span>Farmer Partners</span></div>
+    <div class="stat">25+<span>Supermarkets & Retailers</span></div>
+    <div class="stat">40+<span>Hotels & Restaurants</span></div>
+  </div>
+</section>
+
+<section id="enquiry" class="section light">
+  <div class="container">
+    <h2>Business Enquiry</h2>
+<form
+  id="businessEnquiryForm"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSct77Vu_qGwCH-80CX7Kpjl_Ak869e4Rw-BqW9yrayDCTFMNA/formResponse"
+  method="POST"
+  target="hidden_iframe"
+  onsubmit="handleSubmit(event)"
+>
+
+  <input type="text" name="entry.2005620554" placeholder="Name" required>
+
+  <input type="text" name="entry.566177631" placeholder="Organization Name" required>
+
+  <input type="tel" name="entry.1166974658" placeholder="Phone Number" required>
+
+  <input type="email" name="entry.1045781291" placeholder="Email ID" required>
+
+  <input type="text" name="entry.1584017609" placeholder="Quantity Needed">
+
+  <input type="text" name="entry.839337160" placeholder="Location" required>
+
+  <textarea name="entry.1065046570" placeholder="Message" required></textarea>
+
+  <button type="submit" id="submitBtn">Submit Enquiry</button>
+
+  <p id="successMessage" style="display:none;color:#2f6f4e;font-weight:600;margin-top:15px;">
+    ✅ Thank you! Your enquiry has been submitted successfully.
+  </p>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+    
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>📞 +91 9900152573</p>
+    <p>✉️ divasafreshf2f@gmail.com</p>
+  </div>
+</section>
+    <section class="section light">
+  <div class="container">
+
+    <h2 id="terms">Terms & Conditions</h2>
+    <p>
+      Divasa Fresh operates as a farm-to-market aggregation platform supplying fresh
+      fruits, vegetables, and food products. By engaging with our services, you agree
+      to comply with all applicable laws, delivery guidelines, and usage policies.
+      Product availability may vary based on seasonality and sourcing conditions.
+    </p>
+
+    <h2 id="privacy">Privacy Policy</h2>
+    <p>
+      We respect your privacy. Any personal information shared with Divasa Fresh is
+      used solely for order processing, communication, and service improvement.
+      We do not sell or share customer data with third parties.
+    </p>
+
+    <h2 id="refund">Refund Policy</h2>
+    <p>
+      Due to the perishable nature of fresh produce, refunds are evaluated on a
+      case-by-case basis. Issues related to quality or incorrect delivery must be
+      reported within 24 hours of delivery for resolution.
+    </p>
+
+    <h2 id="shipping">Shipping & Delivery</h2>
+    <p>
+      Deliveries are scheduled based on location, order type, and subscription plans.
+      While we strive for timely delivery, delays due to weather, supply constraints,
+      or operational factors may occur.
+    </p>
+
+  </div>
+</section>
+
+<footer>
+  <p style="font-weight:600;">Follow Us</p>
+
+  <div style="font-size:22px;">
+    <a href="https://www.instagram.com/divasafresh/" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="mailto:divasafreshf2f@gmail.com">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+
+  <div style="margin-top:20px;font-size:14px;">
+    <a href="#terms">Terms & Conditions</a> |
+    <a href="#privacy">Privacy Policy</a> |
+    <a href="#refund">Refund Policy</a> |
+    <a href="#shipping">Shipping</a>
+  </div>
+
+  <p style="margin-top:12px;font-size:13px;">
+    © Divasa Fresh – All Rights Reserved
+  </p>
+</footer>
+
+<script>
+  let formSubmitted = false;
+
+  function handleSubmit(event) {
+    if (formSubmitted) {
+      event.preventDefault();
+      return false;
+    }
+
+    formSubmitted = true;
+
+    const submitBtn = document.getElementById("submitBtn");
+    const successMessage = document.getElementById("successMessage");
+    const form = document.getElementById("businessEnquiryForm");
+
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Submitting...";
+
+    // Show success message after Google Form receives data
+    setTimeout(() => {
+      successMessage.style.display = "block";
+      submitBtn.innerText = "Submitted";
+      form.reset();
+    }, 1200);
+  }
+</script>
+
+</body>
+</html>
