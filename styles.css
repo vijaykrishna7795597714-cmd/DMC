@@ -563,3 +563,59 @@ footer i {
 footer i:hover {
   transform: scale(1.15);
 }
+/* ================= POWDER GRID – SIDE BY SIDE ================= */
+
+.powder-grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 side by side */
+  gap: 30px;
+}
+
+.powder-card {
+  background: #151515;
+  border-radius: 20px;
+  padding: 22px;
+  text-align: center;
+}
+
+.powder-card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.powder-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.powder-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.powder-card li {
+  color: #dddddd;
+  font-size: 14.5px;
+  margin-bottom: 6px;
+}
+
+/* MOBILE STACK */
+@media (max-width: 900px) {
+  .powder-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .powder-grid {
+    grid-template-columns: 1fr;
+  }
+}
