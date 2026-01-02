@@ -29,11 +29,31 @@ body {
   color: #2f6f4e;
 }
 
-nav a {
-  margin-left: 20px;
+/* NAV MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* NORMAL LINKS */
+.nav-menu a {
   text-decoration: none;
-  color: #1f2933;
   font-weight: 500;
+  color: #1f2933; /* NOT blue */
+}
+
+/* REMOVE BLUE VISITED COLOR */
+.nav-menu a:visited {
+  color: #1f2933;
+}
+
+/* CTA BUTTON */
+.nav-menu a.cta {
+  background: #2f6f4e;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
 }
 
 .btn {
