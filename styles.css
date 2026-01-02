@@ -534,3 +534,36 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* ================= FOOTER ICON COLORS ================= */
+
+/* Reset footer link blue */
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Instagram */
+footer .fa-instagram {
+  color: #E4405F;
+}
+
+/* Facebook */
+footer .fa-facebook {
+  color: #1877F2;
+}
+
+/* Email */
+footer .fa-envelope {
+  color: #ffffff;
+}
+
+/* Icon spacing */
+footer i {
+  margin: 0 12px;
+  transition: transform 0.25s ease;
+}
+
+/* Hover effect (premium feel) */
+footer i:hover {
+  transform: scale(1.15);
+}
