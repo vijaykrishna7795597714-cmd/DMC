@@ -632,3 +632,54 @@ footer i:hover {
 .bg-light-yellow p {
   color:#1f2933;
 }
+/* ================= TEXT COLOR FIX FOR LIGHT BACKGROUNDS ================= */
+
+/* Pale pink (Juice section) */
+.bg-pale-pink,
+.bg-pale-pink h2,
+.bg-pale-pink h3,
+.bg-pale-pink p,
+.bg-pale-pink li {
+  color: #1f2933;
+}
+
+/* Soft green sections */
+.bg-soft-green,
+.bg-soft-green h2,
+.bg-soft-green h3,
+.bg-soft-green p,
+.bg-soft-green li {
+  color: #1f2933;
+}
+
+/* White / light sections */
+.bg-white,
+.section,
+.section.light,
+.bg-light-yellow,
+.full-width-blue {
+  color: #1f2933;
+}
+
+/* Ensure links are not blue */
+.bg-pale-pink a,
+.bg-soft-green a,
+.section a {
+  color: #1f2933;
+}
+/* ================= ABOUT SECTION – FORCE WHITE BLOCK ================= */
+
+#about {
+  background: #ffffff;
+  color: #1f2933;
+}
+
+#about h2,
+#about h3,
+#about p,
+#about li {
+  color: #1f2933;
+}
+.section {
+  background: #ffffff;
+}
