@@ -683,3 +683,22 @@ footer i:hover {
 .section {
   background: #ffffff;
 }
+/* FORCE ALL SECTIONS TO FULL WIDTH */
+.section,
+.fw-section,
+.full-width-blue,
+.full-width-block {
+  width: 100%;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* CENTER CONTENT BUT NO SIDE COLOR GAPS */
+.container,
+.fw-inner,
+.full-width-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
