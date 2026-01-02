@@ -88,9 +88,6 @@ body {
 
 .hero-buttons { margin-top: 30px; }
 
-.section {
-  padding: 80px 20px;
-}
 
 .section.light {
   background: #f7f9f8;
@@ -210,11 +207,6 @@ footer {
   margin-top: 15px;
 }
 /* FULL WIDTH LIGHT BLUE BLOCK */
-.full-width-blue {
-  width: 100%;
-  background: #90D5FF;
-  padding: 110px 0;
-}
 
 .full-width-inner {
   max-width: 1200px;
@@ -287,15 +279,12 @@ footer {
 }
 /* ================= FULL WIDTH SYSTEM ================= */
 
-.fw-section {
-  width: 100%;
-  padding: 110px 0;
-}
+
 
 .fw-inner {
   max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 70px;
@@ -701,4 +690,35 @@ footer i:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+}
+/* REMOVE EXCESS TEXT SPACING */
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+ul {
+  margin-bottom: 16px;
+}
+.powder-grid {
+  padding: 0;          /* removes fake height */
+}
+
+.powder-card {
+  padding: 20px;
+}
+/* GLOBAL CONTENT-DRIVEN SECTION HEIGHT */
+.section,
+.fw-section,
+.full-width-blue,
+.full-width-block {
+  padding: 64px 0;   /* balanced professional spacing */
+}
+
+/* HERO – slightly taller but still content-based */
+.hero {
+  padding: 120px 20px 90px;
 }
